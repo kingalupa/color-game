@@ -24,8 +24,6 @@ $(document).keydown(function(){
     }
 }) 
 // 
-
-
    
 function startOver() {
     level = 1;
@@ -174,7 +172,7 @@ function checkAnswer() {
 
         if (userClickedPattern.length === gameColors.length){
                 started = false;
-                $("body").load("https://kingalupa.github.io/color-game/index.html");
+                $("body").load("https://kingalupa.github.io/color-game/");
                 $("h1").text("Level" + " " + level + " "+ "completed. Press any key")
                 $(".btn").remove();
                 userClickedColor = [];
@@ -227,4 +225,5 @@ function animatePress(currentColor) {
 
     }
 }
+
 
