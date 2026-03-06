@@ -1,0 +1,94 @@
+body {
+    background-color: rgb(116, 64, 164);
+    color: white;
+    font-size: 40px;
+
+}
+
+h1 {
+    color: rgb(230, 200, 54);
+    text-align: center;
+    font-size: 100px;
+    Font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+    margin: 5px 0px;
+}
+
+p {
+    margin: 0px;
+    margin-right: 2px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+.time {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+.points {
+    width: 15%;
+    margin-left: 10%;
+}
+
+
+.container {
+    height: 350px;
+    width: 100%;
+    display: grid;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    gap: 0px;
+
+}
+
+.row {
+    display: grid;
+    width: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-self: center;
+    align-content: flex-start;
+}
+    /* align-content: ; */
+
+
+/* .column {
+    grid-row-start: ;
+} */
+
+.btn {
+    height: 200px;
+    width: 200px;
+    transition-duration: 0.4s;
+    background-color: white;
+    border: rgba(0, 0, 0, 0.786) solid 5px;
+    border-radius: 5%;
+    margin-inline-start: 25%;
+}
+
+
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: gray;
+}
+
+.hover-effect {
+  background-color: white;
+  animation: shake 2s;
+}
