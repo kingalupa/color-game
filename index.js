@@ -55,7 +55,7 @@ function startTimer(duration, display) {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes ? "0" + minutes : minutes;
+        minutes = minutes < 10  ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
@@ -108,10 +108,6 @@ function nextLevel(){
         }
     }
 
-
-
-
-
 function randomPosition() {
     for(l = 0; l < numberofButtons; l++) {
         while (randomPositionsOfBlocks.length < numberofButtons) {
@@ -119,9 +115,7 @@ function randomPosition() {
             if (randomPositionsOfBlocks.indexOf(number) === -1){
                 var newNumber = number;
                 randomPositionsOfBlocks.push(newNumber);
-            }
-        }
-        
+            }}  
     }
 }
 
@@ -161,9 +155,6 @@ function addButton(line, newID, color) {
     $("." + line).append(new_div);
     }
    
-
-
-
 function checkAnswer() {
     for (g = 0; g < userClickedColor.length; g++){
         if(userClickedColor[g] === userClickedColor[g+1] && userClickedBox[g] !== userClickedBox[g+1]) {
@@ -174,7 +165,6 @@ function checkAnswer() {
             $(".points p").text("Points:" + points);
             userClickedColor = [];
             userClickedBox = [];
-            
         }
         if (userClickedColor.length >= 2) {
             userClickedColor = [];
@@ -184,7 +174,7 @@ function checkAnswer() {
 
         if (userClickedPattern.length === gameColors.length){
                 started = false;
-                $("body").load("index.html");
+                $("body").load("https://kingalupa.github.io/color-game/index.html");
                 $("h1").text("Level" + " " + level + " "+ "completed. Press any key")
                 $(".btn").remove();
                 userClickedColor = [];
@@ -237,3 +227,4 @@ function animatePress(currentColor) {
 
     }
 }
+
